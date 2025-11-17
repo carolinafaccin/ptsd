@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 import pandas as pd
-# from IPython.display import display # Não é necessário se você não está exibindo DataFrames
 
 # =========================================================================
 # 0. DEFINIÇÃO DE CAMINHOS
@@ -17,7 +16,7 @@ OUTPUT_PATH = Path('data/ibge/censo2022/clean')
 OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
 
 # Define dtypes para garantir que os IDs de Setor Censitário sejam lidos como string
-SECTOR_COL_DTYPE = {'CD_SETOR': str, 'CD_setor': str}
+SECTOR_COL_DTYPE = {'CD_SETOR': str, 'setor': str, 'CD_setor': str}
 
 # --- DICA DE DEBUG ---
 print(f"DEBUG: Caminho de Entrada Absoluto: {Path.cwd().joinpath(BASE_PATH).resolve()}") 
